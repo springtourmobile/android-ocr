@@ -287,9 +287,9 @@ final class OcrInitAsyncTask extends AsyncTask<String, String, Boolean> {
         } catch (IllegalArgumentException e) {
             // Catch "View not attached to window manager" error, and continue
         }
-
+        String mulitlanguageCode = "eng+chi_sim";
         // Initialize the OCR engine
-        if (baseApi.init(destinationDirBase + File.separator, languageCode, ocrEngineMode)) {
+        if (baseApi.init(destinationDirBase + File.separator, mulitlanguageCode, ocrEngineMode)) {
             return installSuccess && osdInstallSuccess;
         }
         return false;
